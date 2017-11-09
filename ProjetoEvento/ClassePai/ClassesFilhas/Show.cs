@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Text;
 
 namespace ProjetoEvento.ClassePai.ClassesFilhas {
     public class Show : Evento {
@@ -39,6 +40,50 @@ namespace ProjetoEvento.ClassePai.ClassesFilhas {
                 sw.Close ();
             }
             return efetuado;
+        }
+
+        public override string Pesquisar (string TituloEvento) {
+            string resultado = "Titulo não encontrado";
+            StreamReader sr = null;
+
+            try {
+                sr = new StreamReader ("_Show.csv", Encoding.Default);
+                string linha = "";
+                while ((linha = sr.ReadLine ()) != null) {
+                    string[] dados = linha.Split (';');
+                    if (dados[0] == TituloEvento) {
+                        resultado = linha;
+                        break;
+                    }
+                }
+            } catch (Exception ex) {
+                resultado = "Erro ao manipular arquivo: " + ex.Message;
+            } finally {
+                sr.Close ();
+            }
+            return resultado;
+        }
+
+        public override string Pesquisar (DateTime Data) {
+            string resultado = "Titulo não encontrado";
+            StreamReader sr = null;
+
+            try {
+                sr = new StreamReader ("_Show.csv", Encoding.Default);
+                string linha = "";
+                while ((linha = sr.ReadLine ()) != null) {
+                    string[] dados = linha.Split (';');
+                    if (dados[3] == Data.ToString()) {
+                        resultado = linha;
+                        break;
+                    }
+                }
+            } catch (Exception ex) {
+                resultado = "Erro ao manipular arquivo: " + ex.Message;
+            } finally {
+                sr.Close ();
+            }
+            return resultado;
         }
     }
 }
