@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 namespace ProjetoEvento.ClassePai {
     public abstract class Evento {
