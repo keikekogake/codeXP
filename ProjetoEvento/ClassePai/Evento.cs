@@ -9,6 +9,7 @@ namespace ProjetoEvento.ClassePai {
         public string Duracao { get; set; }
         public DateTime Data { get; set; }
         public string Local { get; set; }
+        
 
         public virtual bool Cadastrar () {
             return false;
@@ -19,6 +20,10 @@ namespace ProjetoEvento.ClassePai {
         }
 
         public virtual string Pesquisar (string TituloEvento) {
+            return null;
+        }
+
+        public virtual string Pesquisar (string[] AtorEntrada) {
             return null;
         }
     }
