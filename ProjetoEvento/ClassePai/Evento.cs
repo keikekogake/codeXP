@@ -8,17 +8,17 @@ namespace ProjetoEvento.ClassePai {
         public string Duracao { get; set; }
         public DateTime Data { get; set; }
         public string Local { get; set; }
-    }
 
-    public virtual bool Cadastrar () {
-        return false;
-    }
+        public virtual bool Cadastrar () {
+            return false;
+        }
 
-    public virtual string Pesquisar (DateTime DataEvento) {
-        return null;
-    }
+        public virtual string Pesquisar (DateTime DataEvento) {
+            return null;
+        }
 
-    public virtual string Pesquisar (string TituloEvento) {
-        return null;
+        public virtual string Pesquisar (string TituloEvento) {
+            return null;
+        }
     }
 }
