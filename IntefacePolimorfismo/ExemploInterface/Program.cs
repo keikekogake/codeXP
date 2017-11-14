@@ -4,13 +4,14 @@ using ClasseInterface;
 namespace ExemploInterface {
     class Program {
         static void Main (string[] args) {
-            Produto pr = new Produto () {
-                Id = 30,
-                Nome = "Sabão",
-                Descricao = "Em pó",
-                Preco = 30
-            };
-            Console.WriteLine (pr.Cadastro ());
+            Endereco end = new Endereco();
+            end.Logradouro = "Rua Nova Esperança";
+            end.Numero = "123";
+            end.Bairro = "Centro";
+
+            PF pf = new PF(10, "keike.kogake@gmail.com","11940359890",end,"Keike","40314256865");
+
+            Console.WriteLine(pf.Cadastro());
         }
     }
 }
