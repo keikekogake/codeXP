@@ -196,6 +196,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "ClasseInterface/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/ClasseInterface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClasseInterface.dll": {}
+        }
       }
     }
   },
@@ -656,10 +666,16 @@
         "netstandard.library.2.0.0.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "ClasseInterface/1.0.0": {
+      "type": "project",
+      "path": "c:\\Users\\FIC\\backend\\IntefacePolimorfismo\\ClasseInterface\\ClasseInterface.csproj",
+      "msbuildProject": "c:\\Users\\FIC\\backend\\IntefacePolimorfismo\\ClasseInterface\\ClasseInterface.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "ClasseInterface >= 1.0.0",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
   },
@@ -690,7 +706,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "c:\\Users\\FIC\\backend\\IntefacePolimorfismo\\ClasseInterface\\ClasseInterface.csproj": {
+              "projectPath": "c:\\Users\\FIC\\backend\\IntefacePolimorfismo\\ClasseInterface\\ClasseInterface.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

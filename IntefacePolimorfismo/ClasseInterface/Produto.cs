@@ -14,7 +14,7 @@ namespace ClasseInterface {
         }
 
         public string Cadastro () {
-            string composicao = "Id do produto: " + Id + "\nNome do produto" + Nome.ToUpper () + "\nDescricao do produto" + Descricao.ToUpper () + "\nPreco do produto" + string.Format ("{c}", Preco);
+            string composicao = "Id do produto: " + Id + "\nNome do produto: " + Nome.ToUpper () + "\nDescricao do produto: " + Descricao.ToUpper () + "\nPreco do produto: " + string.Format ("{0:C2}", Preco);
             return "Produto cadastrado: \n" + composicao;
         }
 
