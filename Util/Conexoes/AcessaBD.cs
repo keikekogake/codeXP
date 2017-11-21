@@ -1,16 +1,37 @@
+using System;
 using MySql.Data.MySqlClient;
 
 namespace Conexoes {
     public class AcessaBD {
-        public string server = "";
-        public string user = "";
-        public string database = "";
-        public string porta = "";
-        public string senha = "";
+        public MySqlConnection connection;
+        private string server;
+        private string database;
+        private string uid;
+        private string password;
 
-        public void ConectaBD () {
-            string strCon = "server=" + server + ";user=" + user + ";database=" + database + ";port=" + porta + ";password=" + senha + "";
-            MySqlConnection conn = new MySqlConnection(strCon);
+        protected bool AbrirConexao () {
+            server = "";
+            database = "";
+            uid = "";
+            password = "";
+            string connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+
+            connection = new MySqlConnection (connectionString);
+            try {
+                connection.Open ();
+                return true;
+            } catch (MySqlException ex) {
+                return false;
+            }
+        }
+
+        protected bool FecharConexao () {
+            try {
+                connection.Close ();
+                return true;
+            } catch (MySqlException ex) {
+                return false;
+            }
         }
     }
 }
