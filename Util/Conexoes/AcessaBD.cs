@@ -20,7 +20,7 @@ namespace Conexoes {
             try {
                 connection.Open ();
                 return true;
-            } catch (MySqlException ex) {
+            } catch (MySqlException) {
                 return false;
             }
         }
@@ -29,7 +29,7 @@ namespace Conexoes {
             try {
                 connection.Close ();
                 return true;
-            } catch (MySqlException ex) {
+            } catch (MySqlException) {
                 return false;
             }
         }

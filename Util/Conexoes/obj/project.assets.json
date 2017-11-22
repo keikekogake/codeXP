@@ -6680,28 +6680,30 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\FIC\\.nuget\\packages\\": {},
+    "C:\\Users\\keike\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\FIC\\backend\\Util\\Conexoes\\Conexoes.csproj",
+      "projectUniqueName": "C:\\Users\\keike\\Documents\\ProjetosWeb\\codeXP\\Util\\Conexoes\\Conexoes.csproj",
       "projectName": "Conexoes",
-      "projectPath": "c:\\Users\\FIC\\backend\\Util\\Conexoes\\Conexoes.csproj",
-      "packagesPath": "C:\\Users\\FIC\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\FIC\\backend\\Util\\Conexoes\\obj\\",
+      "projectPath": "C:\\Users\\keike\\Documents\\ProjetosWeb\\codeXP\\Util\\Conexoes\\Conexoes.csproj",
+      "packagesPath": "C:\\Users\\keike\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\keike\\Documents\\ProjetosWeb\\codeXP\\Util\\Conexoes\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\FIC\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\keike\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
