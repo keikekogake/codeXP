@@ -6,7 +6,7 @@ namespace SysLog {
     class Program {
         static void Main (string[] args) {
             string op = "";
-            string usuario = "";
+            string user = "";
             string senha = "";
             Usuario us = new Usuario ();
 
@@ -18,18 +18,19 @@ namespace SysLog {
                 switch (op) {
                     case "1":
                         Console.Write ("Digite o usuário: ");
-                        usuario = Console.ReadLine ();
+                        user = Console.ReadLine ();
                         Console.Write ("Digite a senha: ");
                         senha = Console.ReadLine ();
-                        Console.WriteLine (us.Cadastrar (usuario, senha));
+                        Console.WriteLine (us.Cadastrar (user, senha));
                         break;
 
                     case "2":
                         Console.Write ("Digite o usuário: ");
-                        usuario = Console.ReadLine ();
+                        user = Console.ReadLine ();
                         Console.Write ("Digite a senha: ");
                         senha = Console.ReadLine ();
-                        Console.WriteLine (us.Logar (usuario, senha));
+                        
+                        us.ELog += new Usuario.DLog (us.Log);
 
                         break;
 

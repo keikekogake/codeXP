@@ -42,7 +42,7 @@ namespace SysLog {
                     array = linha.Split (';');
                     if (usuarioEntrada == array[0] && senhaEntrada == array[1]) {
                         msg = "Usuário válido";
-
+                        this.ELog (usuarioEntrada, "logou");
                     }
                 }
             } catch (Exception ex) {
@@ -53,12 +53,32 @@ namespace SysLog {
             return msg;
         }
 
-        public void Superior () {
+        
 
+        public void Log (string usuario, string acao) {
+            StreamWriter sw = null;
+            try {
+                sw = new StreamWriter ("_superior.txt", true);
+                sw.WriteLine ("O usuário " + usuario + " " + acao + " no sistema as " + DateTime.Now.ToShortDateString () + " " + DateTime.Now.ToShortTimeString ());
+            } catch (Exception ex) {
+
+                throw new Exception ("Erro ao manipular o arquivo superior: " + ex.Message);
+            } finally {
+                sw.Close ();
+            }
+            try {
+                sw = new StreamWriter ("_log.txt", true);
+                sw.WriteLine ("O usuário " + usuario + " " + acao + " no sistema as " + DateTime.Now.ToShortDateString () + " " + DateTime.Now.ToShortTimeString ());
+            } catch (Exception ex) {
+
+                throw new Exception ("Erro ao manipular o arquivo log: " + ex.Message);
+            } finally {
+                sw.Close ();
+            }
         }
 
-        public delegate string DLogar (string usuario, string senha);
-        public event DLogar ELogar;
+        public delegate void DLog (string usuario, string acao);
+        public event DLog ELog;
 
         public string Logar () {
             throw new System.NotImplementedException ();
