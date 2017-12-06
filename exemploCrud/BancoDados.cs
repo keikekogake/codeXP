@@ -97,6 +97,7 @@ namespace exemploCrud {
             } finally {
                 con.Close ();
             }
+            
 
             return rs;
         }
@@ -108,6 +109,7 @@ namespace exemploCrud {
                 con.ConnectionString = @"Data Source=.\sqlexpress;Initial Catalog=Papelaria;User Id=sa;Password=senai@123";
                 con.Open ();
 
+                cmd = new SqlCommand ();
                 cmd.Connection = con;
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "select id_categoria, titulo from Categoria where id_categoria = @idCategoria";
@@ -118,19 +120,16 @@ namespace exemploCrud {
                 while (dr.Read ()) {
                     lista.Add (new Categoria {
                         IdCategoria = dr.GetInt32 (0),
-                        Titulo = dr.GetString (1)
+                            Titulo = dr.GetString (1)
                     });
                 }
-                cmd.Parameters.Clear();
-            } 
-            catch (SqlException se) {
+                cmd.Parameters.Clear ();
+            } catch (SqlException se) {
                 throw new Exception ("Erro ao consultar dados: " + se.Message);
-            }
-            catch (Exception ex) {
+            } catch (Exception ex) {
                 throw new Exception ("Erro inesperado: " + ex.Message);
-            }
-            finally {
-                con.Close();
+            } finally {
+                con.Close ();
             }
 
             return lista;
@@ -143,6 +142,7 @@ namespace exemploCrud {
                 con.ConnectionString = @"Data Source=.\sqlexpress;Initial Catalog=Papelaria;User Id=sa;Password=senai@123";
                 con.Open ();
 
+                cmd = new SqlCommand ();
                 cmd.Connection = con;
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "select id_categoria, titulo from Categoria where titulo like @titulo";
@@ -153,19 +153,16 @@ namespace exemploCrud {
                 while (dr.Read ()) {
                     lista.Add (new Categoria {
                         IdCategoria = dr.GetInt32 (0),
-                        Titulo = dr.GetString (1)
+                            Titulo = dr.GetString (1)
                     });
                 }
-                cmd.Parameters.Clear();
-            } 
-            catch (SqlException se) {
+                cmd.Parameters.Clear ();
+            } catch (SqlException se) {
                 throw new Exception ("Erro ao consultar dados: " + se.Message);
-            }
-            catch (Exception ex) {
+            } catch (Exception ex) {
                 throw new Exception ("Erro inesperado: " + ex.Message);
-            }
-            finally {
-                con.Close();
+            } finally {
+                con.Close ();
             }
 
             return lista;
