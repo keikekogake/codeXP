@@ -1,3 +1,5 @@
+use Papelaria
+
 select * from Cliente
 
 CREATE PROCEDURE sp_CadCliente
@@ -10,3 +12,11 @@ VALUES (@nome, @email, @cpf)
 
 
 EXEC sp_CadCliente 'Keike','keike.kogake@gmail.com','40314256865'
+
+
+CREATE PROCEDURE sp_DelCliente
+@id int
+as
+DELETE FROM Cliente
+WHERE id_cliente = @id
+
