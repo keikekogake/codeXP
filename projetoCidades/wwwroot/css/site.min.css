@@ -53,3 +53,7 @@ th {
 tr:hover {
     background-color: darkblue;
 }
+
+a {
+    color: rgb(255, 255, 255)
+}

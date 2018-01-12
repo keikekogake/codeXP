@@ -3,37 +3,38 @@
 <div>
     @* o @ é utilizado para execução de comando RAZOR *@
     <h2>Minhas cidades</h2>
-    @{
-        @*
-        <table width="300">
-            <tr>
-                <td width="50%">
-                    Cidades
-                </td>
-                <td>
-                    Estado
-                </td>
-            </tr>
-            </table>
-            *@
-        foreach(var item in Model) {
-            <li>
-                @item.Nome
-            </li>
-            @*
-            <table width="300">
-            <tr>
-                <td width="50%">
-                    @item.Nome
-                </td>
-                <td width="50%">
-                    @item.Estado
-                </td>
-            </tr>
-            </table>
-            *@
 
-        }
-        
-    }
+    <p>
+    <a asp-action="Cadastrar">Cadastrar nova cidade</a>
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Cidade</th>
+                <th>Estado</th>
+                <th>Habitantes</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach(var item in Model){
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Nome</td>
+                        <td>@item.Estado</td>
+                        <td>@item.Habitantes</td>
+                        <td>
+                            @* COMANDO UTILIZADO PARA DIRECIONAR O USUARIO PARA A PÁGINA "EDITAR" COM O PARAMETRO ID *@
+                            <a asp-action="Editar" asp-route-id="@item.Id">Editar</a> &nbsp;&nbsp;
+                            <a asp-action="Detalhes" asp-route-id="@item.Id">Detalhes</a> &nbsp; &nbsp;
+                            <a asp-action="Excluir" asp-route-id="@item.Id">Excluir</a>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
 </div>

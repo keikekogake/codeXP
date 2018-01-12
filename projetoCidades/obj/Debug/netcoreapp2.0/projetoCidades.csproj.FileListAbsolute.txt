@@ -8,3 +8,13 @@ C:\Users\FIC\backend\projetoCidades\obj\Debug\netcoreapp2.0\projetoCidades.Assem
 C:\Users\FIC\backend\projetoCidades\obj\Debug\netcoreapp2.0\projetoCidades.AssemblyInfo.cs
 C:\Users\FIC\backend\projetoCidades\obj\Debug\netcoreapp2.0\projetoCidades.dll
 C:\Users\FIC\backend\projetoCidades\obj\Debug\netcoreapp2.0\projetoCidades.pdb
+C:\Users\40314256865\backend\codeXP\projetoCidades\bin\Debug\netcoreapp2.0\projetoCidades.deps.json
+C:\Users\40314256865\backend\codeXP\projetoCidades\bin\Debug\netcoreapp2.0\projetoCidades.runtimeconfig.json
+C:\Users\40314256865\backend\codeXP\projetoCidades\bin\Debug\netcoreapp2.0\projetoCidades.runtimeconfig.dev.json
+C:\Users\40314256865\backend\codeXP\projetoCidades\bin\Debug\netcoreapp2.0\projetoCidades.dll
+C:\Users\40314256865\backend\codeXP\projetoCidades\bin\Debug\netcoreapp2.0\projetoCidades.pdb
+C:\Users\40314256865\backend\codeXP\projetoCidades\obj\Debug\netcoreapp2.0\projetoCidades.csproj.CoreCompileInputs.cache
+C:\Users\40314256865\backend\codeXP\projetoCidades\obj\Debug\netcoreapp2.0\projetoCidades.AssemblyInfoInputs.cache
+C:\Users\40314256865\backend\codeXP\projetoCidades\obj\Debug\netcoreapp2.0\projetoCidades.AssemblyInfo.cs
+C:\Users\40314256865\backend\codeXP\projetoCidades\obj\Debug\netcoreapp2.0\projetoCidades.dll
+C:\Users\40314256865\backend\codeXP\projetoCidades\obj\Debug\netcoreapp2.0\projetoCidades.pdb
